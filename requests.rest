@@ -1,0 +1,291 @@
+########
+GET http://localhost:5000/test/64524121806a7b42422e4fa2
+
+########
+POST http://localhost:5000/login
+Content-Type:  application/json
+
+{
+    "email":"shaa8@ac.sce.ac.il",
+    "password":"1234Wqer"
+}
+
+######
+POST http://localhost:5000/register
+Content-Type:  application/json
+
+{
+    "email":"eladdddddddddd@example.com",
+    "gamertag":"eladdddd12412",
+    "password":"password12",
+    "gender":"male",
+    "dob":"1994-12-24T00:00:00.000Z",
+    "g1":"0",
+    "g2":"EUW",
+    "g3":"ARAM",
+    "g4":"Top",
+    "g5":"Diamond I",
+    "discord":"elaad",
+    "country":"France",
+    "language":"French",
+    "picture":"https://res.cloudinary.com/dk9nwmeth/image/upload/v1684851059/etqowcpai7582s20uqrm.png"
+}
+
+########
+GET http://localhost:5000/homepage/648054e0342fbf37e8b4cd76
+
+########
+GET http://localhost:5000/logout/645d00de69d2485922083746
+
+########
+POST http://localhost:5000/createpost/
+Content-Type: application/json
+
+{
+    "id":"64639a7496a66c22e46e4bb5",
+    "text":"LALALALALALALA",
+    "picture":" "
+}
+
+########
+POST http://localhost:5000/editpost/
+Content-Type: application/json
+
+{
+    "postid":"645f63404c6715ceb174be88",
+    "txt": "TOMER!@#TOMER!@#"
+}
+
+########
+POST http://localhost:5000/addcomment
+Content-Type: application/json
+
+{
+    "post":"646396b94ae18be576ce82d5",
+    "user":"64639a7496a66c22e46e4bb5",
+    "text":"LALALALALLA"
+}
+
+#########
+
+POST http://localhost:5000/removecomment
+Content-Type: application/json
+
+{
+    "post":"645f63404c6715ceb174be88",
+    "user":"645d006e69d2485922083738",
+    "comment":"645f836709364bf827d5b77f"
+}
+
+#########
+
+POST http://localhost:5000/addbump
+Content-Type: application/json
+
+{
+    "post":"646396b94ae18be576ce82d5",
+    "user":"64639a7496a66c22e46e4bb5"
+}
+
+#########
+
+POST http://localhost:5000/removebump
+Content-Type: application/json
+
+{
+    "post":"645f63404c6715ceb174be88",
+    "user":"64524121806a7b42422e4fa2"
+}
+
+
+#########
+
+POST http://localhost:5000/savepost
+Content-Type: application/json
+
+{
+    "post":"646396b94ae18be576ce82d5",
+    "user":"64639a7496a66c22e46e4bb5"
+}
+
+#########
+POST http://localhost:5000/removesaved
+Content-Type: application/json
+
+{
+    "post":"645f63404c6715ceb174be88",
+    "user":"64524121806a7b42422e4fa2"
+}
+
+#########
+POST http://localhost:5000/sharepost
+Content-Type: application/json
+
+{
+    "post":"646396b94ae18be576ce82d5",
+    "user":"64639b624ae18be576ce8384"
+}
+
+#########
+POST http://localhost:5000/removeshare
+Content-Type: application/json
+
+{
+    "post":"6460b9a38f3f6d36deb0b2e9",
+    "user":"64524121806a7b42422e4fa2",
+    "share":"646232de79fee60a6316c17c"
+}
+
+##########
+
+POST http://localhost:5000/removepost
+Content-Type: application/json
+
+{
+    "post":"645f63404c6715ceb174be88"
+}
+
+###
+POST http://localhost:5000/addcommenttoshare
+Content-Type: application/json
+
+{
+    "post":"646242a8bf21d2c2da4c9d63",
+    "user":"64524121806a7b42422e4fa2",
+    "text":"EladTomer"
+}
+
+###
+POST http://localhost:5000/removecommentfromshare
+Content-Type: application/json
+
+{
+    "post":"646232de79fee60a6316c17c",
+    "user":"64524121806a7b42422e4fa2",
+    "comment":"6462344296f5b39436feddf7"
+}
+
+###
+POST http://localhost:5000/addbumptoshare
+Content-Type: application/json
+
+{
+    "post":"646242a8bf21d2c2da4c9d63",
+    "user":"64524121806a7b42422e4fa2"
+}
+
+###
+POST http://localhost:5000/removebumpfromshare
+Content-Type: application/json
+
+{
+    "post":"646232de79fee60a6316c17c",
+    "user":"64524121806a7b42422e4fa2"
+}
+
+#####
+POST http://localhost:5000/profile
+Content-Type: application/json
+
+{
+    "profileid":"646ccff49f763e0775e875e7",
+    "idtocheck":"646ccff49f763e0775e875e7"
+}
+
+###
+GET http://localhost:5000/profile/saved/646cd06f9f763e0775e87676
+
+###
+GET http://localhost:5000/profile/bumped/646cd06f9f763e0775e87676
+
+###
+GET http://localhost:5000/profile/stats/64524121806a7b42422e4fa1
+
+
+###
+ GET http://localhost:5000/removeuser/64639d8977e9c911f2683a52
+
+###
+POST http://localhost:5000/search
+Content-Type: application/json
+
+{
+    "searchQuery":"elad",
+    "userId":"64524121806a7b42422e4fa1"
+}
+
+
+###
+POST http://localhost:5000/follows
+Content-Type: application/json
+
+{
+    "id1":"64524121806a7b42422e4fa1",
+    "id2":"64524121806a7b42422e4fa2"
+}
+
+#######
+POST http://localhost:5000/unfollow
+Content-Type: application/json
+
+{
+    "id1":"64524121806a7b42422e4fa1",
+    "id2":"64524121806a7b42422e4fa2"
+}
+
+##########
+GET http://localhost:5000/cleanDataBases
+
+#########
+POST http://localhost:5000/editprofile
+Content-Type: application/json
+
+{
+    "userID":"646cd0519f763e0775e8761d",
+    "newPass":"",
+    "gamerTag":"",
+    "game1":"-1",
+    "game2":"z",
+    "game3":"x",
+    "game4":"c",
+    "game5":"v",
+    "country":"tomer",
+    "language":"debil"
+}
+
+######
+GET http://localhost:5000/matchingPage/646ccff49f763e0775e875e7
+
+######
+GET http://localhost:5000/userdetails/646ccff49f763e0775e875e7
+
+#####
+POST http://localhost:5000/submitmatchingdetails
+Content-Type: application/json
+
+{
+    "userId":"646ccff49f763e0775e875e7",
+    "language1":"",
+    "country1":"",
+    "language2":"Russian",
+    "country2":"Italy",
+    "game1":"1",
+    "game2":"America",
+    "game3":"Ranked - Trio",
+    "game4":"Silver",
+    "game5":null
+}
+
+#####
+
+POST http://localhost:5000/handlematch
+Content-Type: application/json
+
+{
+    "userId2":"646ccff49f763e0775e875e7",
+    "userId1":"646cd03b9f763e0775e8760b",
+    "flag":false
+}
+
+##########
+GET http://localhost:5000/getnotifications/646cd0519f763e0775e8761d
