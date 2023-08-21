@@ -16,7 +16,7 @@ To get started with the development or deployment of the back-end, please follow
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone http://www.github.com/EladSapir/Backend_Project.git
+   git clone http://www.github.com/YossiElgazari/Bump-backend.git
    ```
 
 2. Navigate to the project directory:
